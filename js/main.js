@@ -1,3 +1,11 @@
+/* To Do:
+- create function to get random drink and display it on the DOM
+- display random drinks in a carousel
+- create function to be able to search by ingredient name
+- create error message to display in dom when there's an invalid search
+- style the CSS
+*/
+
 document.addEventListener('DOMContentLoaded', getDrink); 
 document.querySelector('button').addEventListener('click', getDrink) 
 
@@ -20,6 +28,10 @@ async function getDrink() {
   }
 }
 
+async function getRandomDrink(){
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+}
+
 function resetDOM() {
     const cocktails = document.getElementById('cocktails');
 
@@ -38,8 +50,7 @@ function addToDOM(drink) {
             <h3>Ingredients</h3>
             <ul id="ingredients">${getIngredients(drink)}</ul>
             <h3>Instructions</h3>
-            <p>${drink.strInstructions}</p>
-            <p>Serve drink in a ${drink.strGlass.toLowerCase()}</p>
+            <p>${drink.strInstructions} Serve drink in a ${drink.strGlass.toLowerCase()}.</p>
         </div> 
     `;
     
