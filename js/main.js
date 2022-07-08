@@ -8,7 +8,9 @@
 
 document.addEventListener('DOMContentLoaded', getDrink); 
 document.querySelector('button').addEventListener('click', getDrink) 
+document.querySelector('.randomButton').addEventListener('click', getRandomDrink)
 
+/* -- displays drinks in DOM that meet parameters from input -- */
 async function getDrink() {
   const drink = document.querySelector('input').value;
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`
@@ -30,6 +32,20 @@ async function getDrink() {
 
 async function getRandomDrink(){
   const url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+      console.log(data);
+      resetDOM();
+      data.drinks.forEach(drink => {
+        console.log(drink);
+        addToDOM(drink)
+      })
+  }
+  catch (err) {
+    console.log(`Error: ${err}`);
+  }
 }
 
 function resetDOM() {
