@@ -21,25 +21,29 @@ img{
 }
 
 h1 {
-  color: rgb(221, 226, 230);
+  color: rgba(255, 255, 255, .85);
   font-family: 'Oswald', sans-serif;
   font-size: 8rem;
   font-weight: 500;
-  filter: drop-shadow(3px 3px 0 #000);
+  filter: drop-shadow(-5px 5px 0 #c58c1c);
   padding-bottom: 2rem;
   text-transform: uppercase;
 }
 
-h2 {
-  color: fuchsia;
+.cocktailName {
+  color: #000;
   font-family: 'Oswald', sans-serif;
   font-size: 3rem;
-  filter: drop-shadow(1px 1px 0px black);
   font-weight: bold;
+  background-color: #e09f1e;
+  padding: 5px 20px;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
 }
 
 h3 {
-  color: orange;
+  color: #e09f1e;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
@@ -82,8 +86,8 @@ main {
   width: 100%; 
 }
 
-main div {
-  background-color: rgb(224,159,30);
+main .header {
+  background-color: #e09f1e;
   padding: 5rem 5rem 5rem 5rem;
   width: 40%;
   height: 400px;
@@ -101,9 +105,13 @@ main section {
 
 main h2 {
   filter: none;
-  color: rgba(225, 225, 255, .7);
+  color: rgba(255, 255, 255, .7);
+  border-bottom: 2px solid #c58c1c;
+  padding-bottom: 10px;
+  text-align: right;
   font-size: 2rem;
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 form {
@@ -123,9 +131,16 @@ input {
 }
 
 button {
-  background-color: orchid;
+  background-color: #e09f1e;
   padding: 0 10px;
   border: none;
+  width: 40px;
+}
+
+.clearButton {
+  width: 40px;
+  background: #fff;
+  font-size: 2.5rem;
 }
 
 .randomButton {
@@ -141,17 +156,14 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background: #fff;
+  background: #f8f0e4;
   width: 100%;
   justify-content: center;
 }
 
 .cocktail {
-  /* flex: 30%; */
   max-width: 22%;
-  /* justify-content: center; */
-  background: pink;
- 
+  background: #fff;
   margin: 1rem;
 }
 
@@ -172,8 +184,26 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 
+.cocktail h3 {
+  margin-top: 25px;
+}
+
 footer {
   height: 10rem;
   background-color: #000;
   color: #fff;
+}
+
+#ninth>button, .searchButton{
+  transition:all .5s ease-in-out;
+}
+
+#ninth:hover button, .searchButton:hover {
+  background:white;
+  color: #e09f1e;
+}
+
+#ninth:active button {
+  border-bottom: 5px solid #e09f1e;
+  transition: none;
 }

@@ -5,7 +5,7 @@
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Title in the tab</title>
+		<title>Bartender Recipe Book</title>
 
 		<!-- fonts -->
 		<script src="https://kit.fontawesome.com/4a9c518b56.js" crossorigin="anonymous"></script>
@@ -17,34 +17,23 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<!-- <main>
-			<div>
-				<h1>Bartender Recipe Book</h1>
-				<h4>Why limit happy to just an hour?</h4>
-				<form action="#">
-					<input type="text" name="" value="" placeholder="Margarita">
-					<button type="button" name="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-				</form>
-				<h4>Feeling spicy?</h4>
-				<form action="#">
-					<button type="button" name="button" class="randomButton">Get Random Drink</button>
-				</form>
-			</div>
-		</main> -->
 
 		<main>
-			<div>
+			<div class="header">
 				<h1>Bartender<br>Recipe<br>Book</h1>
-				<h2>This is what drinks are made of.</h2>
+				<h2>this is what drinks are made of.</h2>
 			</div>
 			<section>
 				<form action="#" class="search">
 					<input type="text" placeholder="Margarita">
-					<button type="button" name="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<input name="clear" type="reset" value="&#215;" class="clearButton">
+					<button class="searchButton"type="button" name="button"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</form>
 				<form action="#" class="random">
 					<h4>Unsure what you want?</h4>
-					<button type="button" name="button" class="randomButton">Get Random Drink</button>
+					<div id="ninth" class="buttonBox">
+						<button type="button" name="button" class="randomButton">Get Random Drink</button>
+					</div>
 				</form>
 			</section>
 		</main>
