@@ -1,9 +1,10 @@
 /* To Do:
 x create function to get random drink and display it on the DOM
-- display random drinks in a carousel
-- create function to be able to search by ingredient name
+x create function to be able to search by ingredient name
 x create error message to display in dom when there's an invalid search
 x style the CSS
+- try to see if you can stop duplicate drinks from showing up (Pink Gin, Gin Daisy, Gin Sour, Gin Tonic, Gin Swizzle... appears to be when ingredient is also in a drink name)
+- refractor
 */
 
 /* -- Event Listeners -- */
@@ -78,7 +79,7 @@ function addToDOM(drink) {
             <h3>Ingredients</h3>
             <ul id="ingredients">${getIngredients(drink)}</ul>
             <h3>Instructions</h3>
-            <p>${drink.strInstructions} Serve drink in a ${drink.strGlass.toLowerCase()}.</p>
+            <p>${drink.strInstructions} Serve drink in a ${drink.strGlass}.</p>
         </div> 
     `;
     
@@ -97,4 +98,44 @@ function getIngredients(drink) {
       }
   }
   return str;
+}
+
+document.querySelector('.searchButton').addEventListener('click', searchByIngredient);
+
+function searchByIngredient(drink) {
+  const ingredient = document.querySelector('input').value;
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
+
+  fetch(url)
+  .then(res => res.json()) // parse response as JSON
+  .then(data => {
+    console.log(data)
+
+    data.drinks.forEach(element => {
+      console.log(element.idDrink);
+      let drink = element.idDrink
+      searchByID(drink)
+      resetDOM()
+    })
+  })
+  .catch(err => {
+    console.log(`Error: ${err}`);
+  })
+}
+
+function searchByID(drink) {
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink}`
+  
+  fetch(url)
+  .then(res => res.json()) // parse response as JSON
+  .then(data => {
+    console.log(data)
+    data.drinks.forEach(drink => {
+      console.log(drink);
+      addToDOM(drink)
+    })
+  })
+  .catch(err => {
+    console.log(`Error: ${err}`);
+  })
 }
