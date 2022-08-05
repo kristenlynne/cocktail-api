@@ -11,6 +11,12 @@ x style the CSS
 document.addEventListener('DOMContentLoaded', getDrink); 
 document.querySelector('.searchButton').addEventListener('click', getDrink);
 document.querySelector('.randomButton').addEventListener('click', getRandomDrink);
+/* refreshes homepage */
+window.addEventListener("load", event => {
+  document.querySelector('.homeButton').onclick = function() {
+      location.reload(true);
+  }
+});
 
 /* -- displays drinks in DOM that meet parameters from input -- */
 async function getDrink() {
@@ -79,7 +85,7 @@ function addToDOM(drink) {
             <h3>Ingredients</h3>
             <ul id="ingredients">${getIngredients(drink)}</ul>
             <h3>Instructions</h3>
-            <p>${drink.strInstructions} Serve drink in a ${drink.strGlass}.</p>
+            <p>${drink.strInstructions}</p>
         </div> 
     `;
     
