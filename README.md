@@ -5,7 +5,7 @@
 <img src="https://github.com/kristenlynne/kristenlynne/blob/main/projects/cocktaildb.gif">
 </p>
 
-🍾 **Link to live site:** ...
+🍾 **Link to live site:** https://bartenderrecipebook.netlify.app/
 
 🍉 **Link to repo:** https://github.com/kristenlynne/cocktail-api
 
@@ -17,9 +17,9 @@
 
 🍹 Search for drinks by name or ingredient.
 
-🍸 Click on random button to show a random drink.
+🍋 Click on random button to show a random drink.
 
-🍋 Fully responsive design that works on any size screen.
+🍸 Fully responsive design that works on any size screen.
 
 
 ## Optimizations:
