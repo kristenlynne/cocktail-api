@@ -142,13 +142,18 @@ form {
 
 .search {
   margin-bottom: 15px;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 input {
   padding: 0 10px;
   height: 35px;
   width: 325px;
+  font-size: 16px;
   border: none;
+  -webkit-appearance: none;
+  border-radius: 0; 
 }
 
 button {
@@ -162,6 +167,8 @@ button {
   width: 40px;
   background: #fff;
   font-size: 2.5rem;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .clearButton:hover {
@@ -246,16 +253,22 @@ footer a:hover {
 
 #ninth>button, .searchButton{
   transition:all .5s ease-in-out;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 #ninth:hover button, .searchButton:hover {
   background:white;
   color: #e09f1e;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 #ninth:active button, .searchButton:active {
   background: #f8f4ed;
   transition: none;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .homeButton {
@@ -306,6 +319,7 @@ footer a:hover {
   }
   input {
     width: 200px;
+    font-size: 16px;
   }
   #cocktails {
     padding: 0rem 0;
