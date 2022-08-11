@@ -46,7 +46,7 @@ h1 {
   font-weight: 500;
   filter: drop-shadow(-5px 5px 0 #c58c1c);
   margin-bottom: 100px;
-  padding-bottom: 2rem;
+  padding: 2rem 5rem 0rem 5rem;
   text-transform: uppercase;
 }
 
@@ -109,7 +109,7 @@ main {
 
 main .header {
   background-color: #e09f1e;
-  padding: 5rem 5rem 5rem 5rem;
+  padding: 0rem 2rem 0rem 2rem;
   width: 40%;
   height: 500px;
 }
@@ -162,6 +162,10 @@ button {
   width: 40px;
   background: #fff;
   font-size: 2.5rem;
+}
+
+.clearButton:hover {
+  font-size: 2.7rem;
 }
 
 .randomButton {
@@ -254,6 +258,16 @@ footer a:hover {
   transition: none;
 }
 
+.homeButton {
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+.homeButton:hover {
+  color: rgba(255, 255, 255, .5)
+}
+
 /* ---------- Media Queries ----------- */
 
 @media screen and (max-width: 600px) {
@@ -261,7 +275,7 @@ footer a:hover {
     display: none;
   }
   h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     filter: none;
     margin: 0px;
     padding: 0 0 10px 0;
@@ -270,7 +284,7 @@ footer a:hover {
   main h2 {
     font-size: 1.6rem;
     text-align: center;
-    border-bottom: 1px solid #c58c1c;
+    border-bottom: none;
   }
 
   main {
@@ -280,10 +294,95 @@ footer a:hover {
   main .header {
     width: 100%;
     height: 100px;
-    padding: 20px;
+    padding: 0px;
   }
   main section {
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
+  .homeButton {
+    padding: .5rem 0 0 0;
+    font-size: 1.8rem;
+  }
+  input {
+    width: 200px;
+  }
+  #cocktails {
+    padding: 0rem 0;
+  }
+  
+  .cocktail {
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+    border-radius: 0px;
+  }
+  .cocktail img {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  h1 br {
+    display: none;
+  }
+  h1 {
+    font-size: 4.5rem;
+    filter: none;
+    margin: 0px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+  }
+  main h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  main {
+    flex-direction: column;
+  }
+  
+  main .header {
+    width: 100%;
+    height: 150px;
+    padding: 0px;
+  }
+  main section {
+    width: 100%;
+    height: 250px;
+  }
+  .homeButton {
+    padding: 1rem 0 0 1rem;
+    font-size: 1.8rem;
+  }
+  input {
+    width: 300px;
+  }
+  #cocktails {
+    padding: 1rem 0;
+  }
+  .cocktail {
+    max-width: 47%;
+    margin: 1rem;
+    border-radius: 0px;
+  }
+  .cocktail img {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+  main h2 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1051px) and (max-width: 1200px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+  main h2 {
+    font-size: 2rem;
+  }
+
 }
