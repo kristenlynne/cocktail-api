@@ -111,7 +111,7 @@ main .header {
   background-color: #e09f1e;
   padding: 0rem 2rem 0rem 2rem;
   width: 40%;
-  height: 500px;
+  height: 475px;
 }
 
 main section {
@@ -121,7 +121,7 @@ main section {
   background: url('../img/overlay.png'), url('../img/chuttersnap-75j_bL4BhU0-unsplash.jpg');
   background-size: cover;
   width: 60%;
-  height: 500px;
+  height: 475px;
 }
 
 main h2 {
@@ -275,14 +275,14 @@ footer a:hover {
     display: none;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     filter: none;
     margin: 0px;
     padding: 0 0 10px 0;
     text-align: center;
   }
   main h2 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     border-bottom: none;
   }
@@ -320,7 +320,7 @@ footer a:hover {
     max-width: 60%;
   }
 }
-@media screen and (max-width: 900px) {
+/* @media screen and (min-width: 900px) {
   h1 br {
     display: none;
   }
@@ -368,8 +368,8 @@ footer a:hover {
   .cocktail img {
     max-width: 60%;
   }
-}
-@media screen and (min-width: 901px) and (max-width: 1050px) {
+} */
+/* @media screen and (min-width: 901px) and (max-width: 1050px) {
   h1 {
     font-size: 5.5rem;
   }
@@ -385,4 +385,4 @@ footer a:hover {
     font-size: 2rem;
   }
 
-}
+} */
